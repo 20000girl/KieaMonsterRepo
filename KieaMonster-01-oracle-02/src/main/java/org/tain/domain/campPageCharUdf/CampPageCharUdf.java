@@ -1,4 +1,4 @@
-package org.tain.domain.campPageChar;
+package org.tain.domain.campPageCharUdf;
 
 import java.time.LocalDate;
 
@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.tain.domain.campPageCharUdf.CampPageCharUdf;
 import org.tain.utils.LocalDateDeserializer;
 import org.tain.utils.LocalDateSerializer;
 
@@ -19,7 +20,7 @@ import lombok.Data;
 @Entity
 @Table(name = "ci_camp_page_char_udf")
 @Data
-public class CampPageChar {
+public class CampPageCharUdf {
 
 	@Id
 	@Column(name = "campaign_sk")
@@ -33,10 +34,7 @@ public class CampPageChar {
 
 	@Column(name = "char_udf_val", length = 256)
 	private String charUdfVal;
-	
-	@Column(name = "char_ext_column_nm", length = 256)
-	private String charExtColumnNm;
-	
+
 	@Column(name = "processed_dttm")
 	@JsonSerialize(using = LocalDateSerializer.class)
 	@JsonDeserialize(using = LocalDateDeserializer.class)
