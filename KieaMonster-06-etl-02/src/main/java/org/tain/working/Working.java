@@ -90,12 +90,12 @@ public class Working {
 	///////////////////////////////////////////////////////////////////////////
 
 	@Autowired
-	private CellWorking cell;
+	private CellWorking cellWorking;
 
 	private void job05() throws Exception {
 		log.info("KANG-20210320 >>>>> {} {}", CurrentInfo.get());
 
-		if (Flag.flag) this.cell.selectAllAndSend();
+		if (Flag.flag) this.cellWorking.selectAllAndSend();
 	}
 	
 	

@@ -8,7 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
-import org.tain.domain.campPageCharUdf.CampPageCharUdf;
 import org.tain.utils.LocalDateDeserializer;
 import org.tain.utils.LocalDateSerializer;
 
