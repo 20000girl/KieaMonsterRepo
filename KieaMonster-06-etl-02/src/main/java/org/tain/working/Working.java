@@ -7,6 +7,7 @@ import org.tain.utils.Flag;
 import org.tain.working.board.BoardWorking;
 import org.tain.working.campPage.CampPageWorking;
 import org.tain.working.campPageCharUdf.CampPageCharUdfWorking;
+import org.tain.working.cell.CellWorking;
 import org.tain.working.tests.TestsWorking;
 
 import lombok.extern.slf4j.Slf4j;
@@ -22,6 +23,7 @@ public class Working {
 		if (Flag.flag) job02();  // for board
 		if (Flag.flag) job03();  // for campPage
 		if (Flag.flag) job04();  // for campPageCharUdf
+		if (Flag.flag) job05();  // for cell
 	}
 	
 	///////////////////////////////////////////////////////////////////////////
@@ -82,5 +84,20 @@ public class Working {
 		
 		if (Flag.flag) this.campPageCharUdfWorking.selectAllAndSend();
 	}
+	
+	///////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////
+
+	@Autowired
+	private CellWorking cell;
+
+	private void job05() throws Exception {
+		log.info("KANG-20210320 >>>>> {} {}", CurrentInfo.get());
+
+		if (Flag.flag) this.cell.selectAllAndSend();
+	}
+	
+	
 	
 }
