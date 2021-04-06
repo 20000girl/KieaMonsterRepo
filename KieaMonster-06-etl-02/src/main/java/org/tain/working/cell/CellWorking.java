@@ -6,7 +6,6 @@ import org.tain.httpClient.MonHttpClient;
 import org.tain.node.MonJsonNode;
 import org.tain.utils.CurrentInfo;
 import org.tain.utils.Flag;
-import org.tain.working.campPageCharUdf.CampPageCharUdfWorking;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
