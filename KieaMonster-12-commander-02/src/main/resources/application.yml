@@ -148,7 +148,7 @@ proj-env:
   param:
     name: PARAM (air)
     home: C:\Temp\_LHG
-    base: /KANG/monster/20210320
+    base:
     info-path: /json/info
     data-path: /json/data
   job:
