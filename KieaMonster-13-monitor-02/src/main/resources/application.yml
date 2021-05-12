@@ -1,10 +1,10 @@
 
 
 # --------------------------------
-# BASE of worker
+# BASE of commander
 
 server:
-  port: 8091
+  port: 8093
   servlet:
     context-path: /v0.1
     encoding:
@@ -17,7 +17,8 @@ server:
 
 
 spring:
-  config.use-legacy-processing: true
+  # legacy method
+  #config.use-legacy-processing: true
   profiles.active:
   - proj-default
   - proj-air
@@ -92,7 +93,7 @@ spring:
 # 
 logging:
   file:
-    path: logs/worker/
+    path: logs/monitor/
     max-size: 10MB
     max-history: 30         # delete after a month
   pattern:
@@ -114,7 +115,9 @@ logging:
 # --------------------------------------------------------
 # --------------------------------------------------------
 # --------------------------------------------------------
-spring.profiles: proj-default
+spring:
+  #profiles: proj-default
+  config.activate.on-profile: proj-default
 
 proj-env:
   base:
@@ -123,10 +126,8 @@ proj-env:
     version: ver 1.1_2021.04.01
     comment: This is Monster API project.
     char-set: utf-8
-    #test-flag: true
-    #svr-code: TEST03
-    async-size: 20
-    
+    # test-flag: true
+    # svr-code: TEST01
   param:
     name: PARAM (default)
   job:
@@ -139,7 +140,9 @@ proj-env:
 ---
 # --------------------------------------------------------
 # proj-local
-spring.profiles: proj-air
+spring:
+  # profiles: proj-air
+  config.activate.on-profile: proj-air
 
 proj-env:
   param:
@@ -148,7 +151,6 @@ proj-env:
     base: /KANG/monster/20210320
     info-path: /json/info
     data-path: /json/data
-    svr-code: TEST01
   job:
     name: JOB (air)
   json:
@@ -159,12 +161,14 @@ proj-env:
     cmd-info-file: cmd-*.json
   url:
     name: URL (air)
-    ws-uri: ws://localhost:8092/v0.1/websocket
+    ws-uri: ws://localhost:8093/v0.1/websocket
 
 ---
 # --------------------------------------------------------
 # proj-test
-spring.profiles: proj-pro
+spring:
+  # profiles: proj-pro
+  config.activate.on-profile: proj-pro
 
 proj-env:
   param:
@@ -187,7 +191,9 @@ proj-env:
 ---
 # --------------------------------------------------------
 # proj-aws
-spring.profiles: proj-aws
+spring:
+  # profiles: proj-aws
+  config.activate.on-profile: proj-aws
 
 proj-env:
   param:
@@ -202,7 +208,9 @@ proj-env:
 ---
 # --------------------------------------------------------
 # proj-dfep
-spring.profiles: proj-dfep
+spring:
+  # profiles: proj-dfep
+  config.activate.on-profile: proj-dfep
 
 proj-env:
   param:
@@ -225,7 +233,9 @@ proj-env:
 ---
 # --------------------------------------------------------
 # proj-real
-spring.profiles: proj-real
+spring:
+  # profiles: proj-real
+  config.activate.on-profile: proj-real
 
 proj-env:
   param:
