@@ -1,0 +1,13 @@
+[
+	{
+		"userId": "admin",
+		"passWd": "admin",
+		"groupCd": "ADMIN",
+		"rollCd": "ADMIN"
+	},{
+		"userId": "guest",
+		"passWd": "guest",
+		"groupCd": "GUEST",
+		"rollCd": "GUEST"
+	}
+]

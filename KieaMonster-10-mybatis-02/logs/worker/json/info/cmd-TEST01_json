@@ -1,0 +1,34 @@
+[
+	{
+		"cmdCode": "uname",
+		"cmdName": "uname all",
+		"cmdDesc": "svr desc",
+		"cmdPeriod": 5,
+		"cmdType": "CMD_NORMAL",
+		"cmdArr": "uname -a "
+	},{
+		"cmdCode": "disk",
+		"cmdName": "disk space",
+		"cmdDesc": "disk space",
+		"cmdPeriod": 10,
+		"cmdType": "CMD_NORMAL",
+		"cmdArr": " df -h "
+	},{
+		"cmdCode": "memory",
+		"cmdName": "memory space",
+		"cmdDesc": "memory space",
+		"cmdPeriod": 60,
+		"cmdType": "CMD_NORMAL",
+		"cmdArr": " ps -ef "
+	},{
+		"cmdCode": "ping",
+		"cmdName": "ping",
+		"cmdDesc": "ping google.com",
+		"cmdPeriod": 0,
+		"cmdType": "CMD_NORMAL",
+		"cmdArr": " ping google.com -i 3 "
+	}
+]
+
+
+
